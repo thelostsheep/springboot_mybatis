@@ -24,18 +24,18 @@ import java.util.Map;
 public class DruidConfig {
 
 
-//    @ConfigurationProperties(prefix = "spring.datasource") //将数据库连接信息直接封装到数据源对象中
-//    @Bean
-//    public DataSource dataSource() throws SQLException {
-//        DruidDataSource dataSource = new DruidDataSource();
-//        dataSource.setFilters("stat");
-//        return dataSource;
-//    }
-    @Autowired
-    public DataSource dataSource(DataSource dataSource) throws SQLException {
-        ((DruidDataSource)dataSource).setFilters("stat");
+    @ConfigurationProperties(prefix = "spring.datasource") //将数据库连接信息直接封装到数据源对象中
+    @Bean
+    public DataSource dataSource() throws SQLException {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setFilters("stat");
         return dataSource;
     }
+//    @Autowired
+//    public DataSource dataSource(DataSource dataSource) throws SQLException {
+//        ((DruidDataSource)dataSource).setFilters("stat");
+//        return dataSource;
+//    }
 
     //配置Druid的监控
 //1、配置一个管理后台的Servlet
