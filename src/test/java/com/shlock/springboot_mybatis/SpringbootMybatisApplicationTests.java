@@ -21,6 +21,7 @@ class SpringbootMybatisApplicationTests {
         userService.findAll().forEach(System.out::println);
     }
 
+    public void aaaa(){}
     @Test
     void test1(){
         System.out.println(dataSource.getClass());

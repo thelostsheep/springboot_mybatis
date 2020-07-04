@@ -28,7 +28,7 @@ public class DruidConfig {
     @Bean
     public DataSource dataSource() throws SQLException {
         DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setFilters("stat");
+//        dataSource.setFilters("stat");
         return dataSource;
     }
 //    @Autowired
