@@ -22,6 +22,7 @@ class SpringbootMybatisApplicationTests {
     }
 
     public void aaaa(){}
+    public void bbbb(){}
     @Test
     void test1(){
         System.out.println(dataSource.getClass());
